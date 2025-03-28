@@ -17,7 +17,6 @@ class DiT(torch.nn.Module):
         self.embed_dim = num_channels * p * p
         
         self.patchify = torch.nn.Unfold(self.p, dilation=1, padding=0, stride=self.p)
-        self.patchify_embed = 
         # self.embed = embed
         # self.DiTBlocks = [arr of DiTBlock]
         # self.layer_norm = layer norm
