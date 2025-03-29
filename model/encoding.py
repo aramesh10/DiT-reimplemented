@@ -31,9 +31,16 @@ class SinusoidalEncoding(torch.nn.Module):
         return x 
 
 if __name__ == "__main__":
-    import matplotlib.pyplot as plt
+    # import matplotlib.pyplot as plt
 
-    x = torch.zeros((1, 50, 128))
-    embedding = SinusoidalEncoding(d=128)
-    plt.imshow(torch.squeeze(embedding(x)))
-    plt.show()
+    # x = torch.zeros((1, 50, 128))
+    # embedding = SinusoidalEncoding(d=128)
+    # plt.imshow(torch.squeeze(embedding(x)))
+    # plt.show()
+    
+    p = 16
+    x_orig = torch.rand((1, 3, 256, 256))
+    
+    print(x_orig.shape)
+    
+    print(x.permute(0, 2, 1).shape)
